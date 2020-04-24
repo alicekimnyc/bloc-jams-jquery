@@ -1,6 +1,8 @@
 class Helper {
   playPauseAndUpdate (song){
-    player.playPause
+    player.playPause = song;
   }
 
   }
+
+const helper = Helper();
