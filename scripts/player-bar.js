@@ -13,6 +13,8 @@ if (nextSongIndex >= album.songs.length) { return; }
 
 const nextSong = album.songs[nextSongIndex];
 helper.playPauseAndUpdate(nextSong);
+
+$('#time-control .total-time').text( nextSong.duration );
   });
 
 $('#time-control input').on('input', function (event){
