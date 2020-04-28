@@ -2,6 +2,8 @@
   $('button#play-pause').on('click', function(){
     helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
+
+$('#time-control .total-time').text( player.currentlyPlaying.duration );
   });
 
   $('button#next').on('click', function(){
