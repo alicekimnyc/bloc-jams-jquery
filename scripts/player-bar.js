@@ -27,7 +27,7 @@ const previousSongIndex = currentSongIndex - 1;
 if (previousSongIndex < 0) { return; }
 
 const previousSong = album.songs[previousSongIndex];
-player.playPause(previousSong);
+helper.playPauseAndUpdate(previousSong);
   });
 
 $('#time-control input').on('input', function (event){
@@ -45,6 +45,7 @@ $('#volume-control input').on('input', function (event){
     const percent = (currentTime / duration) * 100;
     $('#time-control .current-time').text( currentTime );
     $('#time-control input').val(percent);
+    $('#time-control .total-time').text(duration);
   }, 1000);
 
 }
